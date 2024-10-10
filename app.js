@@ -118,7 +118,7 @@ function displayLogs(logs) {
 
   logs.forEach(log => {
     const logItem = document.createElement('li');
-    logItem.innerHTML = `Log: ${log.resultado} <button onclick="deleteLog(${log.id})">Excluir</button>`;
+    logItem.innerHTML = `Log: ${log.resultado} <button onclick="deleteLog(${log.idlog})">Excluir</button>`;
     logsList.appendChild(logItem);
   });
 }
@@ -133,8 +133,8 @@ async function deleteLog(logId) {
     console.log('Resposta da API de exclusão:', data);
 
     if (data && typeof data === 'object') {
-      if (data.message && data.message.includes("excluído")) {
-        console.log(`Log ${logId} excluído com sucesso.`);
+      if (response.ok) {
+      console.log(`Log ${logId} excluído com sucesso.`);
       } else {
         console.log(`Falha ao excluir o log ${logId}: ${data.message || 'Mensagem não fornecida'}`);
       }
