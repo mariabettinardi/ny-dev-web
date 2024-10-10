@@ -118,7 +118,7 @@ function displayLogs(logs) {
 
   logs.forEach(log => {
     const logItem = document.createElement('li');
-    logItem.innerHTML = `Log: ${log.resultado} <button onclick="deleteLog(${log.idlog})">Excluir</button>`;
+    logItem.innerHTML = Data: ${log.log} - Log: ${log.resultado} <button onclick="deleteLog(${log.idlog})">Excluir</button>;
     logsList.appendChild(logItem);
   });
 }
