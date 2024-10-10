@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic News</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Classic News</h1>
+  </header>
+
+  <main>
+    <section id="featured-article" class="featured">
+    </section>
+
+    <section class="news-list">
+      <h2>Latest News</h2>
+      <div id="articles" class="articles-container">
+      </div>
+      <button id="load-more">Load More</button>
+    </section>
+
+    <section class="popular-news">
+      <h2>Popular Articles</h2>
+      <div id="popular-articles" class="articles-container">
+      </div>
+    </section>
+
+    <section class="logs">
+      <h2>Registro de Logs</h2>
+      <button id="show-logs">Exibir Logs</button>
+      <div id="logs-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Logs Registrados</h3>
+          <ul id="logs-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Maria Bettinardi. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
